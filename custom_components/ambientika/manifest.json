@@ -1,0 +1,18 @@
+{
+  "domain": "ambientika",
+  "name": "Ambientika",
+  "version": "0.1.0",
+  "codeowners": [
+    "@wingertge"
+  ],
+  "config_flow": true,
+  "after_dependencies": [],
+  "dependencies": [],
+  "documentation": "https://www.github.com/wingertge/ambientika-hass",
+  "issue_tracker": "https://www.github.com/wingertge/ambientika-hass/issues",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "requirements": ["ambientika_py"],
+  "ssdp": [],
+  "zeroconf": []
+}
