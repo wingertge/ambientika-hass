@@ -5,6 +5,7 @@ import logging
 from typing import Any
 
 import ambientika_py as ambientika
+from returns.result import Failure
 import voluptuous as vol
 
 from homeassistant import config_entries
@@ -41,8 +42,9 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> dict[str,
     # )
     api = await ambientika.authenticate(data[CONF_USERNAME], data[CONF_PASSWORD], data[CONF_HOST])
 
-    if not api:
-        raise InvalidAuth
+    match api:
+        case Failure(_):
+            raise InvalidAuth
 
     # If you cannot connect:
     # throw CannotConnect

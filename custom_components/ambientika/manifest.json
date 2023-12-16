@@ -12,7 +12,7 @@
   "issue_tracker": "https://www.github.com/wingertge/ambientika-hass/issues",
   "homekit": {},
   "iot_class": "cloud_polling",
-  "requirements": ["ambientika_py"],
+  "requirements": ["ambientika_py=0.0.4"],
   "ssdp": [],
   "zeroconf": []
 }
