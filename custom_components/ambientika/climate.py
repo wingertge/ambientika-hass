@@ -63,11 +63,11 @@ async def async_setup_entry(
     ]
 
     # Add devices
-    async_add_entities(AmbientikaFan(device) for device in devices)
+    async_add_entities((AmbientikaFan(device) for device in devices), True)
 
 
 class AmbientikaFan(ClimateEntity):
-    """Representation of an Awesome Light."""
+    """Representation of an Ambientika dewvice."""
 
     _device: Device
     _state: DeviceStatus | None
