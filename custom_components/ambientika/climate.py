@@ -1,4 +1,5 @@
 """Platform for climate control integration."""
+
 from __future__ import annotations
 
 import logging
@@ -11,7 +12,12 @@ import voluptuous as vol
 from homeassistant.components.climate import PLATFORM_SCHEMA, ClimateEntity
 from homeassistant.components.climate.const import ClimateEntityFeature, HVACMode
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_HOST, CONF_PASSWORD, CONF_USERNAME, TEMP_CELSIUS
+from homeassistant.const import (
+    CONF_HOST,
+    CONF_PASSWORD,
+    CONF_USERNAME,
+    UnitOfTemperature,
+)
 from homeassistant.core import HomeAssistant
 
 # Import the device class from the component that you want to support
@@ -127,7 +133,7 @@ class AmbientikaFan(ClimateEntity):
     @property
     def temperature_unit(self) -> str:
         """Return the temperature unit."""
-        return TEMP_CELSIUS
+        return UnitOfTemperature.CELSIUS
 
     @property
     def preset_mode(self) -> str | None:
@@ -148,7 +154,12 @@ class AmbientikaFan(ClimateEntity):
     @property
     def supported_features(self) -> ClimateEntityFeature:
         """Returns the features supported by this device."""
-        return ClimateEntityFeature.FAN_MODE | ClimateEntityFeature.PRESET_MODE
+        return (
+            ClimateEntityFeature.FAN_MODE
+            | ClimateEntityFeature.PRESET_MODE
+            | ClimateEntityFeature.TURN_ON
+            | ClimateEntityFeature.TURN_OFF
+        )
 
     @property
     def is_on(self) -> bool | None:
