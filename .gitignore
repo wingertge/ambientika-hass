@@ -2,3 +2,4 @@
 .venv
 uv.lock
 .python-version
+pyproject.toml
