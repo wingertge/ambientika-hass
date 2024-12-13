@@ -1,0 +1,12 @@
+[project]
+name = "ambientika-hass"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ambientika-py>=0.0.5",
+    "homeassistant>=2024.12.3",
+    "returns>=0.24.0",
+    "voluptuous>=0.15.2",
+]

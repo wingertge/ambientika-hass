@@ -1,18 +1,16 @@
 {
-  "domain": "ambientika",
-  "name": "Ambientika",
-  "version": "0.1.2",
-  "codeowners": [
-    "@wingertge"
-  ],
-  "config_flow": true,
-  "after_dependencies": [],
-  "dependencies": [],
-  "documentation": "https://www.github.com/wingertge/ambientika-hass",
-  "issue_tracker": "https://www.github.com/wingertge/ambientika-hass/issues",
-  "homekit": {},
-  "iot_class": "cloud_polling",
-  "requirements": ["ambientika_py==0.0.4"],
-  "ssdp": [],
-  "zeroconf": []
+    "domain": "ambientika",
+    "name": "Ambientika",
+    "version": "0.1.3",
+    "codeowners": ["@wingertge"],
+    "config_flow": true,
+    "after_dependencies": [],
+    "dependencies": [],
+    "documentation": "https://www.github.com/wingertge/ambientika-hass",
+    "issue_tracker": "https://www.github.com/wingertge/ambientika-hass/issues",
+    "homekit": {},
+    "iot_class": "cloud_polling",
+    "requirements": ["ambientika_py==0.0.4"],
+    "ssdp": [],
+    "zeroconf": []
 }
